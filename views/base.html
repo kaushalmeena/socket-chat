@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocketChat : {{ title }}</title>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendor/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
+  </head>
+
+  <body>
+    <div class="ploader"></div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary justify-content-between">
+      <div class="container">
+        <a class="navbar-brand align-middle" href="/">
+          <i class="fa fa-comments fa-2x"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="{{ 'nav-item active' if title === 'Chat' else 'nav-item' }}">
+              <a class="nav-link" href="/chat">
+                <i class="fa fa-comment-o fa-2x"></i>
+              </a>
+            </li>
+            <li class="{{ 'nav-item active' if title === 'FAQs' else 'nav-item' }}">
+              <a class="nav-link" href="/faqs">
+                <i class="fa fa-question-circle-o fa-2x"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/kaushalmeena/socket-chat">
+                <i class="fa fa-github fa-2x"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-primary"></nav>
+
+    <!-- SCRIPTS -->
+    <script src="/vendor/js/jquery-3.2.1.min.js"></script>
+    <script src="/vendor/js/popper.min.js"></script>
+    <script src="/vendor/js/bootstrap.min.js"></script>
+    <script src="/vendor/js/socket.io.js"></script>
+    <script src="/scripts/script.js"></script>
+    <script>
+      $(window).on('load', function () {
+        $(".ploader").fadeOut("fast");;
+      });
+    </script>
+  </body>
+
+</html>

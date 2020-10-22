@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="container">
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-3 text-center">
+          <img class="img-fluid" src="/images/chat.png" alt="chat-image">
+        </div>
+        <div class="col-md-9">
+          <h1 class="display-5">Welcome!</h1>
+          <p class="lead">
+            SocketChat is web apllication made using Socket.IO library to facilate chatting.
+          </p>
+          <hr class="my-4">
+          <div class="text-center">
+            <div class="btn-group text-center" role="group" aria-label="Basic example">
+              <a href="/chat" role="button" class="btn btn-outline-secondary" data-toggle="tooltip" data-placement="top" title="Chat">
+                <span class="fa fa-comment-o fa-2x"></span>
+              </a>
+              <a href="/faqs" role="button" class="btn btn-outline-secondary" data-toggle="tooltip" data-placement="top" title="Faqs">
+                <span class="fa fa-list fa-2x"></span>
+              </a>
+              <a href="https://github.com/kaushalmeena/socket-chat" role="button" class="btn btn-outline-secondary" data-toggle="tooltip" data-placement="top" title="Github">
+                <span class="fa fa-github fa-2x"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
