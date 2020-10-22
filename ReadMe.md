@@ -1,4 +1,4 @@
-# Socket Chat
+# Socket-Chat
 
 A express application that facilitates chatting between one or more persons using socket.io library.
 
