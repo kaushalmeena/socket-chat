@@ -6,8 +6,8 @@
   "author": "Kaushal Meena <kaushal.meena1996@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "prod": "cross-env NODE_ENV=production node app",
-    "dev": "cross-env NODE_ENV=development node app"
+    "prod": "cross-env NODE_ENV=production node index",
+    "dev": "cross-env NODE_ENV=development node index"
   },
   "dependencies": {
     "cross-env": "^7.0.2",

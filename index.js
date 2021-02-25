@@ -41,13 +41,12 @@ app.get('/faqs', function (req, res) {
 });
 
 var server = app.listen(PORT, function () {
-  console.log("Express server listening on port %d", this.address().port);
+  console.log("Express server listening on port http://localhost:%d", this.address().port);
 });
 
 var io = require("socket.io")(server);
 
 io.on('connection', function (socket) {
-
   socket.on('connected', function (data) {
     io.sockets.emit('connected', {
       username: data.username
